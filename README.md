@@ -8,4 +8,4 @@ jessica_dbpedia_arabic:1.0.1 \
 bash
 ```
 
-0.0.0.0:5987
+http://0.0.0.0:5987/browser/
