@@ -33,12 +33,11 @@ RUN bzip2 -d instance_types_ar.ttl.bz2
 
 RUN grep "dbpedia\.org\/ontology\/" mappingbased_objects_ar.ttl > mappingbased_objects_ar_ontology.ttl
 
-RUN echo "gdsgewr"
+RUN echo "sdgng k"
 
 RUN git clone https://github.com/yanliang12/yan_neo4j_docker.git
 RUN mv /yan_neo4j_docker/* ./
 RUN rm -r yan_neo4j_docker
-
 
 RUN git clone https://github.com/gaoyuanliang/jessica_dbpedia_arabic.git
 RUN mv /jessica_dbpedia_arabic/* ./
