@@ -18,22 +18,29 @@ print('knolwedge based loading completed. loading time %f seconds'%(time.time() 
 
 #######
 
-
 def id_to_name(entity_id):
 	try:
-		return  re.search(r'(resource|ontology)\/(?P<name>.*)', entity_id).group('name')
+		output = re.search(r'(resource)\/(?P<name>.*)', entity_id).group('name')
+		output = re.sub(u"[^A-z\u0600-\u06FF]+", r' ', output)
+		output = re.sub(u"^[^A-z\u0600-\u06FF]+|[^A-z\u0600-\u06FF]+$", r'', output)	
+		output = re.sub(u"_", r' ', output)	
+		return output
 	except:
 		return None
 
-id_to_name(u"http://ar.dbpedia.org/resource/هلسنكي")
+'''
+id_to_name(u"http://ar.dbpedia.org/resource/كوغا_(إيباراكي)")
+'''
 
 def relation_processing(renaltion_name):
-	output = id_to_name(renaltion_name)
+	output = re.search(r'(ontology)\/(?P<name>.*)', renaltion_name).group('name')
 	output = re.sub(r'[^A-z]+', r'_', output)
 	output = re.sub(r'^[^A-z]+|[^A-z]+$', r'', output)
 	return output
 
+'''
 relation_processing(u"http://dbpedia.org/ontology/Language")
+'''
 
 def find_entity_type(entity_id):
 	try:
@@ -47,7 +54,9 @@ def find_entity_type(entity_id):
 	except:
 		return 'Other'
 
+'''
 find_entity_type(u"http://ar.dbpedia.org/resource/ابن_خلدون")
+'''
 
 '''
 print(relation_processing("http://dbpedia.org/ontology/ground"))
@@ -211,11 +220,12 @@ def attach_triplet_type_and_name(input_triplets):
 
 '''
 input_triplets = [
-{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/deathPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'}
-{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/deathPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'}
-{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/deathPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'}
-{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/birthPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'}
+{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/deathPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'},
+{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/deathPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'},
+{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/deathPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'},
+{'object': 'http://ar.dbpedia.org/resource/دبي', 'relation': 'http://dbpedia.org/ontology/birthPlace', 'subject': 'http://ar.dbpedia.org/resource/عبد_الرحمن_بن_حافظ'},
 ]
+
 output_triplets, entity_type_lookup, entity_name_lookup, relation_name_lookup = attach_triplet_type_and_name(input_triplets)
 
 for t in output_triplets:
