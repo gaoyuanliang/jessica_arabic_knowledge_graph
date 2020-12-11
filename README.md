@@ -31,7 +31,7 @@ input:
 
 output:
 
-<img src="WX20201211-224422@2x.png" width=600>
+<img src="WX20201211-232859@2x.png" height=600>
 
 ### example 2
 
@@ -45,4 +45,4 @@ input:
 
 output:
 
-<img src="WX20201211-232620@2x.png" width=600>
+<img src="WX20201211-232620@2x.png" height=600>
