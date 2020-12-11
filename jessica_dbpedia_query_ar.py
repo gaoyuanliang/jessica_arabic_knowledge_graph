@@ -23,6 +23,7 @@ def id_to_name(entity_id):
 		output = re.search(r'(resource)\/(?P<name>.*)', entity_id).group('name')
 		output = re.sub(u"[^A-z\u0600-\u06FF]+", r' ', output)
 		output = re.sub(u"^[^A-z\u0600-\u06FF]+|[^A-z\u0600-\u06FF]+$", r'', output)	
+		output = re.sub(u"_", r' ', output)	
 		return output
 	except:
 		return None
