@@ -1,4 +1,4 @@
-# jessica_dbpedia_arabic
+# Jessica's Arabic Knowledge Graph Engine
 
 ## start the service
 
