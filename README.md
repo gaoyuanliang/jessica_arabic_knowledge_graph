@@ -16,6 +16,7 @@ gaoyuanliang/jessica_dbpedia_arabic:1.0.1
 ## how to use it
 
 rest api input interface: http://0.0.0.0:6887/
+
 neo4j output interface: http://0.0.0.0:5987/browser/
 
 
