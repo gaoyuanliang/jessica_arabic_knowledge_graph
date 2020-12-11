@@ -37,12 +37,38 @@ output:
 
 input:
 
+
+
+output:
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>      
+      <img src="WX20201101-102711@2x.png" height="280">
+    </td>
+    <td>
+<img src="WX20201101-102731@2x.png" height="280">
+    </td>
+  </tr>
+  <tr>
+    <td>  
 ```python
 {
   "text": "دبي هي أكبر مدينة في الإمارات العربية المتحدة"
 }
 ```
-
-output:
-
+    </td>
+    <td>
 <img src="WX20201211-232620@2x.png" height=400>
+    </td>
+</tr>
+</table>
