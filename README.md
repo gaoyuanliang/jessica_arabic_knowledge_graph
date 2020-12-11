@@ -13,4 +13,18 @@ bash
 http://0.0.0.0:5987/browser/
 
 
-<img src="WX20201209-204825@2x.png">
+## how to use it
+
+### example 1
+
+input:
+
+```python
+{
+  "text": "أعيش في بكين"
+}
+```
+
+output:
+
+<img src="WX20201211-224422@2x.png">
