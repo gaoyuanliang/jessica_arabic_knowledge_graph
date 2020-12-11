@@ -21,10 +21,25 @@ input:
 
 ```python
 {
-  "text": "أعيش في بكين"
+  "text": "أسافر من جدة إلى مكة"
 }
 ```
 
 output:
 
 <img src="WX20201211-224422@2x.png">
+
+### example 2
+
+input:
+
+```python
+{
+  "text": "أعيش في بكين"
+}
+```
+
+output:
+
+<img src="WX20201211-224447@2x.png">
+
