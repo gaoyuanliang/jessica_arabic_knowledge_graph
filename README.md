@@ -10,7 +10,6 @@ docker run -it \
 -p 4522:4522 \
 -p 8865:8865 \
 -p 6887:9000 \
--v /Users/Jim/Downloads/:/Downloads/ \
 gaoyuanliang/jessica_dbpedia_arabic:1.0.1 
 ```
 
