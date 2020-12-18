@@ -47,3 +47,11 @@ input:
 output:
 
 <img src="WX20201211-232620@2x.png" height=400>
+
+## Architecture 
+
+The architecture of this engine is introduced in my blog https://gaoyuanliang614.medium.com/jessicas-arabic-knowledge-graph-linking-engine-e83babe38b79
+
+## Contact
+
+I am Jessica Liang, an MS student at Heriot-Watt University Dubai. I will graduate next year, 2021, and be looking for a data scientist/AI engineer/solution job. If you have such openings, please contact me by email, gaoyuanliang@outlook.com
